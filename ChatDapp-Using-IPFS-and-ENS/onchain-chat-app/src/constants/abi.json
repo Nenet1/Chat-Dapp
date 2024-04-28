@@ -1,0 +1,110 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "ensAddress",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "RECEIVER_DOES_NOT_EXIST",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "sender",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "receiver",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "message",
+                "type": "string"
+            }
+        ],
+        "name": "MessageSent",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "ens",
+        "outputs": [
+            {
+                "internalType": "contract IENS",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_receiver",
+                "type": "string"
+            }
+        ],
+        "name": "getChats",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "message",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "receiver",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct Chat.Message[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_receiver",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_message",
+                "type": "string"
+            }
+        ],
+        "name": "sendMessage",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
